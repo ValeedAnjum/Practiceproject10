@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+*:not(i) {
+    font-family: 'Open Sans', sans-serif !important;
+}
+body{
+    background-color: #f5f5f5;
+}
+/* common classes */
+.dBlock{
+    display: block !important;
+}
+.clr{
+    clear: both;
+}
+/* component>Model>Loader */
+.loaderContainer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* background-color:red; */
+}
+.loaderContainer .closeContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loaderContainer .closeContainer .MuiCircularProgress-colorPrimary{
+    color: #01477f;
+}
+/* Header */
+.Header{
+    background: #01477f;
+    color: #ffffff;
+}
+.Header .container:first-child{
+    overflow: auto;
+    padding: 18px 0px;
+}
+.Header .left {
+    float: left;
+}
+.Header .right {
+    float: right;
+}
+.Header .left,.right{
+    list-style-type: none;
+    user-select: none;
+
+}
+.Header .left li{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.Header .right li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.Header .left li i{
+    margin-right: 3px;
+}
+.Header .left li:first-child{
+    margin-right: 10px;
+}
+.Header .dropdown{
+    position: absolute;
+    background: #ffffff;
+    display: none;
+}
+.Header .dropdown li{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    color: black;
+    transition: 0.3s;
+}
+.Header .dropdown li:hover {
+    color: #f6a416;
+}
+.Header li:hover .dropdown {
+    display: block;
+}
+/* Header>>secondnavbar */
+.Header .container:nth-child(2) .search{
+    display: flex;
+}
+.Header .container:nth-child(2) .search .logo{
+    width: 20%;
+}
+.Header .container:nth-child(2) .search .logo img {
+    width: 80%;
+    cursor: pointer;
+}
+.Header .container:nth-child(2) .search .searchinput {
+    margin: auto;
+    width: 60%;
+}
+.Header .container:nth-child(2) .search .searchinput .categories{
+    list-style-type: none;
+    display: inline-block;
+    background-color: #ffffff;
+    user-select: none;
+    width: 40%;
+    cursor: pointer;
+    color: black;
+}
+.Header .container:nth-child(2) .search .searchinput .categories > li{
+    display: inline-block;
+    position: relative;
+    border-right:1px solid rgba(0,0,0,0.2);
+    padding: 10px 15px;
+    width: 100%;
+    white-space: nowrap;
+}
+.Header .container:nth-child(2) .search .searchinput .categories > li > i {
+    padding-right: 10px;
+}
+.Header .container:nth-child(2) .search .searchinput .categories .catedropdown{
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    left: 0;
+    top: 100%;
+}
+.Header .container:nth-child(2) .search .searchinput .categories .catedropdown li {
+    padding: 10px 0;
+    padding-left: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.Header .container:nth-child(2) .search .searchinput .categories .catedropdown li:hover {
+    background-color: #01477f;
+    color: #ffffff;
+}
+.Header .container:nth-child(2) .search .searchinput .searchbar{
+    padding: 10px 15px;
+    outline: none;
+    font-size: 15px;
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #ffffff;
+}
+.Header .container:nth-child(2) .search .searchinput  .inputButton{
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    background: #f6a416;
+    user-select: none;
+}
+.Header .container:nth-child(2) .search .card-wishlist{
+    width: 20%;
+    margin: auto;
+}
+.Header .container:nth-child(2) .search .card-wishlist div{
+    position: relative;
+    display: inline-block;
+}
+.Header .container:nth-child(2) .search .card-wishlist i{
+    font-size: 45px;
+}
+.Header .container:nth-child(2) .search .card-wishlist .wishlist{
+    padding: 10px;
+}
+.Header .container:nth-child(2) .search .card-wishlist .wishlist p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 13px;
+    transform: translate(-50%, -50%);
+}
+.Header .container:nth-child(2) .search .card-wishlist .cart{
+    position: relative;
+    cursor: pointer;
+}
+.Header .container:nth-child(2) .search .card-wishlist .cart img{
+    width: 45px;
+    filter: invert(100%) sepia(0%) saturate(7464%) hue-rotate(189deg) brightness(120%) contrast(92%);
+}
+.Header .container:nth-child(2) .search .card-wishlist .cart .orderquantity{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+}
+/* Header>secondnavbar end  */
+
+/* header > thirdnavbar  */
+.Header .thirdnavbar {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.Header .thirdnavbar .mainmenu{
+    list-style-type: none;
+    display: inline-block;
+}
+.Header .thirdnavbar .mainmenu li {
+    float: left;
+}
+.Header .thirdnavbar .mainmenu li:nth-child(2){
+    display: none;
+}
+.Header .thirdnavbar .mainmenu li a{
+    padding: 0px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.Header .thirdnavbar .mainmenu li a:hover{
+    color: #f6a416;
+}
+.Header .thirdnavbar .mainmenu .fa-caret-down{
+    margin-left: 8px;
+}
+
+/* component:Auth>Register */
+
+.Register .registerform{
+    /* border: 1px solid #000; */
+    margin: auto;
+    padding: 15px;
+}
+.Register input{
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 14px 10px;
+    border-radius: 2px;
+    border: 1px solid #d2d2c7;
+    outline: none;
+    margin-bottom: 15px;
+}
+.Register input.ErrorInput{
+    border: 1px solid #01477f;
+}
+.Register input[type=password]:focus{
+    border: 1px solid #bbbbb3;
+}
+.Register input[type=submit] {
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+}
+.Register input::placeholder {
+    color:black;
+    text-transform: capitalize;
+}
+
+/* component > Home */
+.items{
+    padding: 10px;
+    text-align: center;
+
+}
+/* .items .col-3 img{
+    width: 100%;
+} */
+.items .item{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+}
+.items .item img{
+    width: 100%;
+    height: 300px;
+}
+.items .col-6 .options{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: 0.5s;
+    opacity: 0.1;
+    /*transition: opacity 1s; */
+    background-color: black;
+}
+.items .item:hover .options{
+    top: 50%;
+    opacity: 1;
+}
+.items .col-6 .options i {
+    display: block;
+    color: white;
+    padding: 8px;
+    transition: 0.5s;
+}
+.items .col-6 .options i:hover{
+    background-color: #01477f;
+    cursor: pointer;
+}
+.items .item .itemHeading{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.items .item:hover .itemHeading {
+    color: #01477f;
+}
+.items .item .hr{
+    width: 80%;
+    height: 1px;
+    margin: 5px auto;
+    background-color: rgba(0,0,0,0.3);
+}
+.items .cardPriceRating {
+    background-color: white;
+}
+.items .cardPriceRating p{
+    margin-left: 10px;
+    float: left;
+    font-size: 25px;
+    line-height: normal;
+    font-weight: bold;
+    color: #888888;
+}
+.items .cardPriceRating i{
+    margin-right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888888;
+    cursor: pointer;
+    float: right;
+}
+
+/* componnet > Home */
+.items .LoadMore{
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 15px 50px;
+    background-color: black;
+    color: white;
+    outline: none;
+    transition: 0.2s;
+}
+.items .LoadMore:hover{
+    background-color: rgba(0,0,0,0.9)
+}
+.items .nomoreItems{
+    color: #888888;
+}
+/* component > Card  */
+.card .cardHeadingTable{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.card .cardTableItems img{
+    width: 100%;
+    float: left;
+}
+.card .cardTableItems .col-4{
+    margin-bottom: 10px;
+}
+.card .cardTableItems .col-4 h4{
+    position: absolute;
+    color: #01477f;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+}
+.card .cardTableItems .price,.total,.quantityContainer {
+    top: 50%;
+    position: absolute;
+    font-size: 20px;
+    transform: translate(0px, -50%);
+    font-weight: 700;
+    color: #01477f;
+}
+.card .cardTableItems .quantityContainer *{
+    display: inline-block;
+    padding: 3px 10px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.card .cardTableItems .quantityContainer p{
+    cursor: default;
+    font-size: 16px;
+    font-weight: 200;
+    color: #888888;
+}
+.card .cardTableItems .fa-trash{
+    top: 50%;
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    transform: translate(0px, -50%);
+    transition: 0.3s;
+}
+.card .cardTableItems .fa-trash:hover{
+    background-color: #01477f;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Web Design - Media Queries */
+@media only screen and (max-width: 995px) {
+    .Header .container:nth-child(2) .search {
+      display: none;
+    }
+    .Header .thirdnavbar .mainmenu li{
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .Header .thirdnavbar .mainmenu li a{
+        padding: 0;
+    }
+    .card .cardTableItems .quantityContainer *{
+        padding: 0 6px;
+    }
+    .Header .thirdnavbar .mainmenu li{
+        display: none;
+    }
+    .Header .thirdnavbar .mainmenu li:first-child , .Header .thirdnavbar .mainmenu li:nth-child(2){
+        display: block;
+    }
+    .Header .thirdnavbar{
+        text-align: left;
+    }
+    .Register .col-6 {
+        flex: 0 0 100% !important;
+        max-width: 100%;
+    }
+}
